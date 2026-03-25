@@ -18,7 +18,7 @@ Cursor Feedback MCP
 - 重構的模組化架構
 """
 
-__version__ = "2.6.2"
+__version__ = "2.7.0"
 __author__ = "zhajiahe"
 __email__ = "zhajiahe@example.com"
 
