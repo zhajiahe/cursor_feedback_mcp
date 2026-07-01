@@ -14,8 +14,8 @@ from typing import Any
 import pytest
 
 # 使用正確的模組導入，不手動修改 sys.path
-from mcp_feedback_enhanced.i18n import get_i18n_manager
-from mcp_feedback_enhanced.web.main import WebUIManager
+from cursor_feedback_mcp.i18n import get_i18n_manager
+from cursor_feedback_mcp.web.main import WebUIManager
 
 
 @pytest.fixture(scope="session")
@@ -50,8 +50,6 @@ def test_project_dir(temp_dir: Path) -> Path:
 @pytest.fixture
 def web_ui_manager() -> Generator[WebUIManager, None, None]:
     """創建 WebUIManager fixture"""
-    import os
-
     # 設置測試模式環境變數
     original_test_mode = os.environ.get("MCP_TEST_MODE")
     original_web_host = os.environ.get("MCP_WEB_HOST")
